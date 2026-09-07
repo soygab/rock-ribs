@@ -460,6 +460,8 @@ section{position:relative;}
 ========================================================= */
 .location-wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;}
 .location-map .ph{height:100%;min-height:420px;}
+.location-map{min-height:420px;}
+.location-map iframe{display:block;min-height:420px;filter:grayscale(.15) contrast(1.05);}
 .location-info{background:var(--charcoal);padding:64px;display:flex;flex-direction:column;justify-content:center;}
 .info-row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);}
 .info-row:last-child{border-bottom:none;}
