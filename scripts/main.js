@@ -52,17 +52,19 @@ document.addEventListener('DOMContentLoaded', function () {
   // Cardápio: filtro por categoria
   var menuTabs = document.getElementById('menuTabs');
   var menuItems = document.querySelectorAll('#menuGrid .menu-item');
-  menuTabs.addEventListener('click', function(e){
-    var btn = e.target.closest('.menu-tab');
-    if (!btn) return;
-    menuTabs.querySelectorAll('.menu-tab').forEach(function(t){ t.classList.remove('active'); });
-    btn.classList.add('active');
-    var cat = btn.dataset.cat;
-    menuItems.forEach(function(item){
-      var match = (cat === 'todos') || (item.dataset.cat === cat);
-      item.classList.toggle('show', match);
+  if (menuTabs){
+    menuTabs.addEventListener('click', function(e){
+      var btn = e.target.closest('.menu-tab');
+      if (!btn) return;
+      menuTabs.querySelectorAll('.menu-tab').forEach(function(t){ t.classList.remove('active'); });
+      btn.classList.add('active');
+      var cat = btn.dataset.cat;
+      menuItems.forEach(function(item){
+        var match = (cat === 'todos') || (item.dataset.cat === cat);
+        item.classList.toggle('show', match);
+      });
     });
-  });
+  }
 
   // Galeria: filtro por categoria
   var galleryTabs = document.getElementById('galleryTabs');
