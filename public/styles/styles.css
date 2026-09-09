@@ -187,7 +187,7 @@ section{position:relative;}
   min-height:100svh;display:flex;align-items:flex-end;position:relative;padding-top:var(--header-h);
   background:
     linear-gradient(180deg, rgba(12,10,9,.35) 0%, rgba(12,10,9,.35) 40%, rgba(12,10,9,.94) 92%),
-    url('/public/image/fundo.png');
+    url('../image/fundo.png');
   background-size:cover;
   background-position:center;
 }
