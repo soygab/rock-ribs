@@ -251,7 +251,7 @@ section{position:relative;}
 .showcase-nav svg{width:18px;height:18px;}
 
 .showcase-track{
-  display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;
+  display:flex;gap:22px;overflow-x:auto;padding-bottom:14px;
   scrollbar-width:none;
 }
 .showcase-track::-webkit-scrollbar{display:none;}
@@ -259,7 +259,9 @@ section{position:relative;}
   flex:0 0 auto;width:290px;scroll-snap-align:start;background:var(--black);border:1px solid var(--line);
   display:flex;flex-direction:column;transition:transform .3s ease, border-color .3s ease;
 }
+.show-card-multi,.show-card-multi:hover{border-color:transparent;}
 .show-card:hover{transform:translateY(-6px);border-color:var(--gold);}
+.show-program-image{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;}
 .show-card .ph{aspect-ratio:4/5;}
 .show-artist-photo{
   display:block;
@@ -267,6 +269,10 @@ section{position:relative;}
   aspect-ratio:1/1;
   object-fit:cover;
   object-position:center;
+}
+.show-multi-program{
+  display:block;width:100%;aspect-ratio:1/1;object-fit:contain;object-position:center;
+  background:#fff;
 }
 .show-date-badge{
   position:absolute;top:16px;left:16px;background:var(--red);color:var(--cream);text-align:center;
@@ -498,7 +504,7 @@ section{position:relative;}
 /* =========================================================
    13. RESERVAS
 ========================================================= */
-.reserve-options{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:64px;}
+.reserve-options{display:grid;grid-template-columns:repeat(2,minmax(0,380px));justify-content:center;gap:22px;margin-bottom:64px;}
 .reserve-opt{background:var(--charcoal-2);border:1px solid var(--line);padding:38px 28px;text-align:center;transition:.3s;cursor:pointer;}
 .reserve-opt:hover{border-color:var(--red);transform:translateY(-4px);}
 .reserve-opt svg{width:34px;height:34px;color:var(--red-glow);margin-bottom:16px;}
